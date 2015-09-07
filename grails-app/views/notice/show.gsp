@@ -16,6 +16,17 @@
 
 		</li>
 	</g:if>
+
+	<g:if test="${noticeInstance?.title}">
+		<li class="fieldcontain">
+			<span id="title-label" class="property-label"><g:message code="notice.title.label" default="Title" /></span>
+
+			<span class="property-value" aria-labelledby="title-label"><g:fieldValue bean="${noticeInstance}" field="title"/></span>
+
+		</li>
+	</g:if>
+
+
 	<g:if test="${noticeInstance?.description}">
 		<li class="fieldcontain">
 			<span id="description-label" class="property-label"><g:message code="notice.description.label" default="Description" /></span>
@@ -30,15 +41,6 @@
 			<span id="noticeDate-label" class="property-label"><g:message code="notice.noticeDate.label" default="Notice Date" /></span>
 
 			<span class="property-value" aria-labelledby="noticeDate-label"><g:formatDate date="${noticeInstance?.noticeDate}" /></span>
-
-		</li>
-	</g:if>
-
-	<g:if test="${noticeInstance?.title}">
-		<li class="fieldcontain">
-			<span id="title-label" class="property-label"><g:message code="notice.title.label" default="Title" /></span>
-
-			<span class="property-value" aria-labelledby="title-label"><g:fieldValue bean="${noticeInstance}" field="title"/></span>
 
 		</li>
 	</g:if>

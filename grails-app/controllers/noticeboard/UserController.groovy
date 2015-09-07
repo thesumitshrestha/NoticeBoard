@@ -7,7 +7,7 @@ class UserController {
     }
     def logout(){
         session.user=null
-        render view: '../notice/HomePage'
+        redirect(controller: 'notice',action: 'homePage')
     }
     def authenticate(){
         def user=User.findByUsernameAndPassword(params.username,params.password)
